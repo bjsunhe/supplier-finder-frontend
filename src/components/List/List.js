@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './List.css';
 
 
@@ -6,13 +6,15 @@ import './List.css';
 
 const List = ({ data }) => {
 
+
+console.log(data)
   
   return (
     <>
     <h2>{data.question}</h2>
     {
       
-      data.answer.map((a,i)=>{ 
+      JSON.parse(data.answer).map((a,i)=>{ 
         return (
         <table className="attributes-table" key={i}>
           <thead>
