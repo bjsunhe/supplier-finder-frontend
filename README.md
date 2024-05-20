@@ -1,12 +1,21 @@
 # genai-frontend
 
+
+## update
+
+git pull
+npm run build
+sudo cp -r ./build/* /var/www/palletizer
+
+
+## first
 sudo apt update
 sudo apt install nginx
 
 
 sudo mkdir -p /var/www/palletizer
 
-cp -r /build/* /var/www/palletizer
+sudo cp -r ./build/* /var/www/palletizer
 
 
 sudo chown -R $USER:$USER /var/www/palletizer
@@ -32,6 +41,6 @@ server {
         }
 }
 
-sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/palletizer /etc/nginx/sites-enabled/
 
 sudo systemctl restart nginx
